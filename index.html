@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" ></script>
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="kontak">
+    <select onchange="selectAkci()" id="select">
+        <option>Vyber akci</option>
+        <option value="Reve" >Reverze řeťezce</option>
+        <option value="Spli" >Rozdělení na slova</option>
+        <option value="Vysk">Počet výskytů slova</option>
+        <option value="Nahr">Nahradit písmeno</option>
+        <option value="Hled">Hledání textu</option>
+    </select>
+    </div>
+
+    <div id="reverse">
+        <input type="text" id="inputReve">
+        <button onclick="reverseRetezec()" id="rev">Přetočit text</button>
+
+        <label id="vysledekReve"></label>
+    </div>
+
+    <div id="split">
+        <input type="text" id="inputSpli">
+        <button onclick="splitSlov()" id="spl">Splitnout text</button>
+    
+        <label id="vysledekSpli"></label>
+    </div>
+
+    <div id="vyskit">
+        <input type="text" id="inputVysk">
+        <input type="text" id="inputVyskHled">
+        <button onclick="vyskitSlov()" id="vys" >Vyskit slova</button>
+
+        <label id="vysledekSpli"></label>
+    </div>
+
+    <div id="nahradit">
+        <input type="text" id="inputNahr">
+        <input type="text" id="inputNahrHled">
+        <button onclick="" id="nah" >Nahradit pismeno</button>
+
+        <label onclick="nahraditSlov()" id="vysledekNahr"></label>
+    </div>
+
+    <div id="hledat">
+        <input type="text" id="inputHled">
+        <input type="search" id="inputHledHled">
+
+        <button onclick=""></button>
+    </div>
+</body>
+</html>

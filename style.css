@@ -1,0 +1,19 @@
+#kontak{
+    display: flex;
+    justify-content: center;
+}
+#reverse{
+    display: none;
+}
+#split{
+    display: none;
+}
+#vyskit{
+    display: none;
+}
+#nahradit{
+    display: none;
+}
+#hledat{
+    display: none;
+}
