@@ -19,7 +19,6 @@ function splitSlov(){
 }
 
 function vyskitSlov(){
-    let vysledek = document.getElementById("vysledekVysk")
     let text = document.getElementById("inputVysk").value;
     let hledSlov = document.getElementById("inputVyskHled").value;    
     let pocetSlov = 2;
@@ -29,16 +28,33 @@ function vyskitSlov(){
                 pocetSlov+= 1;
             }
         });
-        vysledek.textContent = pocetSlov;
+        document.getElementById("vysledekVysk").textContent = pocetSlov;
 
 }
 
-function nahraditSlov(){
-    let vysledek = document.getElementById("vysledekNahr")
+function nahraditPism(){
+    let vysledek = document.getElementById("vysledekNahr");
     let text = document.getElementById("inputNahr").value;
     let hled = document.getElementById("inputNahrHled").value;
+    let nahr = document.getElementById("inputNahrRepl").value;
+
+    var textNahr = text.replace(hled, nahr);
+    
+    vysledek.textContent = textNahr;
 
 }
+function hledatSlov(){
+    var text = document.getElementById("inputHled").value;
+    var slovo = document.getElementById("inputHledHled").value;
+    
+    var regex = new RegExp("\\b" + slovo + "\\b", "gi");
+    var vyznacenyText = text.replace(regex, function(match) {
+      return "<span class='vyznaceny'>" + match + "</span>";
+    });
+    
+    document.getElementById("vysledekHled").innerHTML = vyznacenyText;
+  }
+
 
 function selectAkci(){
     var sele = document.getElementById("select").value;
